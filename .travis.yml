@@ -39,7 +39,9 @@ before_install:
   - temp=`find ./ -name "ITKConfig.cmake"`
   - echo $temp
   - cd ${TRAVIS_BUILD_DIR}
-  - export ITK_DIR=$(pwd)/itkbuild/
+  - export ITK_DIR=`pwd`/itkbuild/
+  - echo $ITK_DIR
+  - echo `ls $ITK_DIR`
 
 install:
   - python3 setup.py build_py
