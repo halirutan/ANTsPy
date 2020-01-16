@@ -42,9 +42,9 @@ before_install:
   - export ITK_DIR=/home/travis/build/ANTsX/itkbuild/
 
 install:
-  - python3 setup.py build_py
-  - python3 setup.py sdist bdist_wheel
   - python3 setup.py install
+  - python3 setup.py sdist bdist_wheel
+
 
 deploy:
   provider: releases
