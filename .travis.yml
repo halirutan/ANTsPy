@@ -7,10 +7,10 @@ os:
 
 cache:
     - directories:
-        - /home/travis/build/ANTsX/itkbuild
-        - /home/travis/build/ANTsX/itksource
-        - /home/travis/build/ANTsX/ANTsPy/ants/lib
-        - /home/travis/build/ANTsX/ANTsPy/build
+        - /home/travis/build/halirutan/itkbuild
+        - /home/travis/build/halirutan/itksource
+        - /home/travis/build/halirutan/ANTsPy/ants/lib
+        - /home/travis/build/halirutan/ANTsPy/build
         - /usr/local
 
 before_install:
