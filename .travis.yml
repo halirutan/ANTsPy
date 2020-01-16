@@ -38,13 +38,13 @@ before_install:
   - if [ ! -f /home/travis/build/ANTsX/itkbuild/ITKConfig.cmake ]; then bash ${TRAVIS_BUILD_DIR}/scripts/configure_ITK.sh; fi
   - temp=`find ./ -name "ITKConfig.cmake"`
   - echo $temp
-  - echo $(pwd)
   - cd ${TRAVIS_BUILD_DIR}
-  - export ITK_DIR=/home/travis/build/ANTsX/itkbuild/
+  - export ITK_DIR=$(pwd)/itkbuild/
 
 install:
-  - python3 setup.py install
+  - python3 setup.py build_py
   - python3 setup.py sdist bdist_wheel
+  - python3 setup.py install
 
 
 deploy:
