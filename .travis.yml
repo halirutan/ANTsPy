@@ -43,8 +43,8 @@ before_install:
   - cd ${TRAVIS_BUILD_DIR}
 
 install:
-  - python3 setup.py install
-  - python3 setup.py sdist bdist_wheel
+  - travis_wait 30 python3 setup.py install
+  - travis_wait 30 python3 setup.py sdist bdist_wheel
 
 
 deploy:

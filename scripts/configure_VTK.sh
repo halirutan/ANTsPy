@@ -6,7 +6,7 @@ if [[ `uname` -eq Darwin ]] ; then
 fi
 if [[ $TRAVIS -eq true ]] ; then
   CMAKE_BUILD_TYPE=Release
-  JTHREADS=2
+  JTHREADS=4
 fi
 
 #cd ./src
@@ -47,6 +47,6 @@ cmake \
     -DBUILD_EXAMPLES:BOOL=OFF \
     -DVTK_LEGACY_REMOVE:BOOL=OFF \
     -DVTK_WRAP_PYTHON:BOOL=OFF ../vtksource/
-make -j 8
+make -j 4
 #make install
 cd ../
