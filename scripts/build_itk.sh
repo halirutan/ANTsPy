@@ -45,6 +45,6 @@ cmake \
     -DCMAKE_CXX_VISIBILITY_PRESET:BOOL=hidden \
     -DCMAKE_VISIBILITY_INLINES_HIDDEN:BOOL=ON ../itksource/
 
-make -j 3
+make -j 8
 #make install
 cd ../
