@@ -38,11 +38,10 @@ before_install:
   - if [ ! -f /home/travis/build/halirutan/itkbuild/ITKConfig.cmake ]; then bash ${TRAVIS_BUILD_DIR}/scripts/configure_ITK.sh; fi
   - temp=`find ./ -name "ITKConfig.cmake"`
   - echo $temp
-  - cd ${TRAVIS_BUILD_DIR}
-  - ls -r
   - export ITK_DIR=`pwd`/itkbuild/
+  - ls -r
   - echo $ITK_DIR
-  - echo `ls $ITK_DIR`
+  - cd ${TRAVIS_BUILD_DIR}
 
 install:
   - python3 setup.py build_py
