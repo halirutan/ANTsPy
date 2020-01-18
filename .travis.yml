@@ -39,7 +39,7 @@ before_install:
 #  - if [ ! -f /home/travis/build/halirutan/itkbuild/ITKConfig.cmake ]; then bash ${TRAVIS_BUILD_DIR}/scripts/configure_ITK.sh; fi
 #  - temp=`find ./ -name "ITKConfig.cmake"`
 #  - echo $temp
-#  - export ITK_DIR=`pwd`/itkbuild/
+  - export ITK_DIR=/usr/lib/cmake/ITK-4.9/
 #  - echo $ITK_DIR
   - cd ${TRAVIS_BUILD_DIR}
 
